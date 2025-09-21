@@ -1,0 +1,271 @@
+<svg viewBox="0 0 1080 1920" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="skyGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FF6B9D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFB347;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="oceanGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#2171B5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cloudGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#F0F8FF;stop-opacity:0.7" />
+    </linearGradient>
+    
+    <linearGradient id="mountainGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#A0522D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#654321;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="sunGradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FFA500;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:0.6" />
+    </radialGradient>
+    
+    <!-- Filters for effects -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Palm tree pattern -->
+    <g id="palmTree">
+      <!-- Trunk -->
+      <ellipse cx="0" cy="40" rx="8" ry="80" fill="#8B4513"/>
+      <!-- Palm fronds -->
+      <path d="M0,-40 Q-30,-60 -50,-45 Q-25,-50 0,-40" fill="#228B22"/>
+      <path d="M0,-40 Q30,-60 50,-45 Q25,-50 0,-40" fill="#32CD32"/>
+      <path d="M0,-40 Q-20,-70 -10,-80 Q-15,-55 0,-40" fill="#228B22"/>
+      <path d="M0,-40 Q20,-70 10,-80 Q15,-55 0,-40" fill="#32CD32"/>
+      <path d="M0,-40 Q0,-75 5,-85 Q-5,-65 0,-40" fill="#228B22"/>
+    </g>
+    
+    <!-- Airplane -->
+    <g id="airplane">
+      <path d="M0,0 L30,5 L25,15 L35,20 L30,25 L20,20 L15,30 L5,25 L0,15 L-10,10 L0,0" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="1"/>
+      <circle cx="10" cy="10" r="3" fill="#FF6B9D"/>
+    </g>
+  </defs>
+  
+  <!-- Sky background with gradient -->
+  <rect width="1080" height="1920" fill="url(#skyGradient)"/>
+  
+  <!-- Sun -->
+  <circle cx="850" cy="250" r="80" fill="url(#sunGradient)" filter="url(#glow)"/>
+  
+  <!-- Sun rays -->
+  <g stroke="#FFD700" stroke-width="3" opacity="0.6">
+    <line x1="770" y1="170" x2="750" y2="150"/>
+    <line x1="930" y1="170" x2="950" y2="150"/>
+    <line x1="770" y1="330" x2="750" y2="350"/>
+    <line x1="930" y1="330" x2="950" y2="350"/>
+    <line x1="750" y1="250" x2="720" y2="250"/>
+    <line x1="950" y1="250" x2="980" y2="250"/>
+    <line x1="850" y1="150" x2="850" y2="120"/>
+    <line x1="850" y1="350" x2="850" y2="380"/>
+  </g>
+  
+  <!-- Clouds -->
+  <g fill="url(#cloudGradient)">
+    <!-- Cloud 1 -->
+    <ellipse cx="200" cy="300" rx="60" ry="30"/>
+    <ellipse cx="170" cy="310" rx="40" ry="25"/>
+    <ellipse cx="230" cy="310" rx="45" ry="28"/>
+    
+    <!-- Cloud 2 -->
+    <ellipse cx="600" cy="200" rx="50" ry="25"/>
+    <ellipse cx="580" cy="210" rx="35" ry="20"/>
+    <ellipse cx="620" cy="210" rx="40" ry="23"/>
+    
+    <!-- Cloud 3 -->
+    <ellipse cx="100" cy="450" rx="70" ry="35"/>
+    <ellipse cx="60" cy="460" rx="45" ry="30"/>
+    <ellipse cx="140" cy="460" rx="50" ry="32"/>
+    
+    <!-- Cloud 4 -->
+    <ellipse cx="900" cy="400" rx="55" ry="28"/>
+    <ellipse cx="875" cy="410" rx="38" ry="22"/>
+    <ellipse cx="925" cy="410" rx="42" ry="25"/>
+  </g>
+  
+  <!-- Mountains in background -->
+  <g fill="url(#mountainGradient)" opacity="0.7">
+    <polygon points="0,900 200,600 400,700 600,550 800,650 1000,500 1080,550 1080,900"/>
+    <polygon points="100,900 300,650 500,720 700,600 900,680 1080,600 1080,900"/>
+  </g>
+  
+  <!-- Ocean/Water -->
+  <rect x="0" y="1200" width="1080" height="720" fill="url(#oceanGradient)"/>
+  
+  <!-- Ocean waves -->
+  <g fill="none" stroke="#FFFFFF" stroke-width="2" opacity="0.6">
+    <path d="M0,1250 Q270,1230 540,1250 T1080,1250"/>
+    <path d="M0,1280 Q270,1260 540,1280 T1080,1280"/>
+    <path d="M0,1320 Q270,1300 540,1320 T1080,1320"/>
+    <path d="M0,1360 Q270,1340 540,1360 T1080,1360"/>
+    <path d="M0,1420 Q270,1400 540,1420 T1080,1420"/>
+  </g>
+  
+  <!-- Beach/Sand -->
+  <ellipse cx="540" cy="1200" rx="540" ry="100" fill="#F4A460" opacity="0.8"/>
+  
+  <!-- Palm trees -->
+  <g transform="translate(150,1100) scale(1.2)">
+    <use href="#palmTree" fill="#8B4513"/>
+  </g>
+  
+  <g transform="translate(900,1080) scale(0.9)">
+    <use href="#palmTree" fill="#8B4513"/>
+  </g>
+  
+  <g transform="translate(300,1120) scale(1.0)">
+    <use href="#palmTree" fill="#8B4513"/>
+  </g>
+  
+  <!-- Airplanes -->
+  <g transform="translate(400,350) rotate(15) scale(1.5)" opacity="0.8">
+    <use href="#airplane"/>
+  </g>
+  
+  <g transform="translate(700,500) rotate(-10) scale(1.2)" opacity="0.6">
+    <use href="#airplane"/>
+  </g>
+  
+  <!-- Hot air balloons -->
+  <g transform="translate(250,400)">
+    <!-- Balloon -->
+    <ellipse cx="0" cy="0" rx="40" ry="50" fill="#FF6B9D"/>
+    <ellipse cx="0" cy="-10" rx="35" ry="40" fill="#FFB347"/>
+    <ellipse cx="0" cy="-20" rx="30" ry="30" fill="#4ECDC4"/>
+    <!-- Basket -->
+    <rect x="-8" y="40" width="16" height="12" fill="#8B4513"/>
+    <!-- Ropes -->
+    <line x1="-25" y1="30" x2="-8" y2="40" stroke="#654321" stroke-width="1"/>
+    <line x1="25" y1="30" x2="8" y2="40" stroke="#654321" stroke-width="1"/>
+    <line x1="-15" y1="35" x2="-8" y2="52" stroke="#654321" stroke-width="1"/>
+    <line x1="15" y1="35" x2="8" y2="52" stroke="#654321" stroke-width="1"/>
+  </g>
+  
+  <g transform="translate(800,550) scale(0.7)">
+    <!-- Balloon -->
+    <ellipse cx="0" cy="0" rx="40" ry="50" fill="#4ECDC4"/>
+    <ellipse cx="0" cy="-10" rx="35" ry="40" fill="#FF6B9D"/>
+    <ellipse cx="0" cy="-20" rx="30" ry="30" fill="#FFB347"/>
+    <!-- Basket -->
+    <rect x="-8" y="40" width="16" height="12" fill="#8B4513"/>
+    <!-- Ropes -->
+    <line x1="-25" y1="30" x2="-8" y2="40" stroke="#654321" stroke-width="1"/>
+    <line x1="25" y1="30" x2="8" y2="40" stroke="#654321" stroke-width="1"/>
+    <line x1="-15" y1="35" x2="-8" y2="52" stroke="#654321" stroke-width="1"/>
+    <line x1="15" y1="35" x2="8" y2="52" stroke="#654321" stroke-width="1"/>
+  </g>
+  
+  <!-- Sailing boats -->
+  <g transform="translate(400,1300)">
+    <!-- Hull -->
+    <ellipse cx="0" cy="20" rx="60" ry="15" fill="#8B4513"/>
+    <!-- Mast -->
+    <line x1="0" y1="5" x2="0" y2="-60" stroke="#654321" stroke-width="3"/>
+    <!-- Main sail -->
+    <path d="M0,-60 L-40,-10 L0,5 Z" fill="#FFFFFF" stroke="#E0E0E0"/>
+    <!-- Jib sail -->
+    <path d="M0,-50 L30,-20 L0,-5 Z" fill="#FF6B9D" stroke="#E0E0E0"/>
+  </g>
+  
+  <g transform="translate(700,1350) scale(0.8)">
+    <!-- Hull -->
+    <ellipse cx="0" cy="20" rx="60" ry="15" fill="#654321"/>
+    <!-- Mast -->
+    <line x1="0" y1="5" x2="0" y2="-60" stroke="#8B4513" stroke-width="3"/>
+    <!-- Main sail -->
+    <path d="M0,-60 L-40,-10 L0,5 Z" fill="#4ECDC4" stroke="#E0E0E0"/>
+    <!-- Jib sail -->
+    <path d="M0,-50 L30,-20 L0,-5 Z" fill="#FFFFFF" stroke="#E0E0E0"/>
+  </g>
+  
+  <!-- Birds -->
+  <g fill="#333333" opacity="0.6">
+    <!-- Bird 1 -->
+    <path d="M500,300 Q490,295 485,300 Q490,305 500,300" transform="scale(1.5)"/>
+    <path d="M510,300 Q520,295 525,300 Q520,305 510,300" transform="scale(1.5)"/>
+    
+    <!-- Bird 2 -->
+    <path d="M600,250 Q590,245 585,250 Q590,255 600,250"/>
+    <path d="M610,250 Q620,245 625,250 Q620,255 610,250"/>
+    
+    <!-- Bird 3 -->
+    <path d="M300,200 Q290,195 285,200 Q290,205 300,200" transform="scale(0.8)"/>
+    <path d="M310,200 Q320,195 325,200 Q320,205 310,200" transform="scale(0.8)"/>
+    
+    <!-- Bird flock -->
+    <path d="M750,300 Q740,295 735,300 Q740,305 750,300" transform="scale(0.6)"/>
+    <path d="M760,300 Q770,295 775,300 Q770,305 760,300" transform="scale(0.6)"/>
+    <path d="M780,295 Q770,290 765,295 Q770,300 780,295" transform="scale(0.6)"/>
+    <path d="M790,295 Q800,290 805,295 Q800,300 790,295" transform="scale(0.6)"/>
+  </g>
+  
+  <!-- Compass rose in corner -->
+  <g transform="translate(950,1750) scale(0.8)" opacity="0.7">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="50" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <!-- Inner circle -->
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+    
+    <!-- Cardinal directions -->
+    <g fill="#FFFFFF" font-family="Arial, sans-serif" font-size="14" text-anchor="middle">
+      <text x="0" y="-35">N</text>
+      <text x="35" y="5">E</text>
+      <text x="0" y="45">S</text>
+      <text x="-35" y="5">W</text>
+    </g>
+    
+    <!-- Compass needle -->
+    <polygon points="0,-25 5,0 0,25 -5,0" fill="#FF6B9D"/>
+    <polygon points="0,-25 -3,0 0,10 3,0" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- Travel icons scattered -->
+  <g fill="#FFFFFF" opacity="0.3">
+    <!-- Camera -->
+    <g transform="translate(100,800)">
+      <rect x="-10" y="-8" width="20" height="12" rx="2" fill="#FFFFFF"/>
+      <circle cx="0" cy="0" r="4" fill="none" stroke="#FFFFFF" stroke-width="1"/>
+      <rect x="-2" y="-10" width="4" height="3" rx="1" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Suitcase -->
+    <g transform="translate(950,900)">
+      <rect x="-12" y="-8" width="24" height="16" rx="2" fill="#FFFFFF"/>
+      <rect x="-10" y="-6" width="20" height="2" fill="none" stroke="#FFFFFF"/>
+      <rect x="-2" y="-12" width="4" height="4" rx="1" fill="#FFFFFF"/>
+    </g>
+    
+    <!-- Map -->
+    <g transform="translate(80,600)">
+      <rect x="-10" y="-8" width="20" height="16" rx="1" fill="#FFFFFF"/>
+      <line x1="-6" y1="-4" x2="6" y2="-4" stroke="#333" stroke-width="0.5"/>
+      <line x1="-6" y1="0" x2="6" y2="0" stroke="#333" stroke-width="0.5"/>
+      <line x1="-6" y1="4" x2="6" y2="4" stroke="#333" stroke-width="0.5"/>
+    </g>
+    
+    <!-- Passport -->
+    <g transform="translate(900,1600)">
+      <rect x="-8" y="-10" width="16" height="20" rx="1" fill="#FF6B9D"/>
+      <rect x="-6" y="-6" width="12" height="8" fill="#FFFFFF"/>
+    </g>
+  </g>
+  
+  <!-- Subtle overlay pattern for depth -->
+  <rect width="1080" height="1920" fill="url(#skyGradient)" opacity="0.1"/>
+</svg>
